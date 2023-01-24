@@ -7,6 +7,11 @@ function mergeSort(array) {
     let arrayLeft = mergeSort(array.slice(0, Math.floor(array.length/2)));
     let arrayRight = mergeSort(array.slice(Math.floor(array.length/2), array.length));  
     //Merge the left and right lists
+    return merge(arrayLeft, arrayRight)
+}
+
+//Merge two arrays
+function merge(arrayLeft, arrayRight) {
     let arrayMerged = [];
     while (arrayLeft.length > 0 && arrayRight.length > 0) {
         if (arrayLeft[0] <= arrayRight[0]) {
@@ -22,6 +27,7 @@ function mergeSort(array) {
     }
     return arrayMerged
 }
+
 
 //Arrays for testing the merge sort function
 let array1 = [8, 7, 10, 4, 3, 2, 17, 6];
