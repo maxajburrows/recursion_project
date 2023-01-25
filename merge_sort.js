@@ -5,7 +5,7 @@ function mergeSort(array) {
     //Sort left and right halves of array separately.
     let arrayLeft = mergeSort(array.slice(0, Math.floor(array.length/2)));
     let arrayRight = mergeSort(array.slice(Math.floor(array.length/2), array.length));  
-    //Merge the left and right lists
+    //Merge the left and right arrays
     return merge(arrayLeft, arrayRight)
 }
 
